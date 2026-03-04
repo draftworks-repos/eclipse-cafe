@@ -1,0 +1,122 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(245, 245, 220, 0.8); /* Cream with opacity */
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-medium);
+}
+
+.brand-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-text {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: var(--color-eclipse);
+  transition: color var(--transition-fast);
+}
+
+.brand-container:hover .brand-text {
+  color: var(--color-nebula);
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-item {
+  position: relative;
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-eclipse);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.nav-item:hover {
+  color: var(--color-nebula);
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-nebula);
+  transition: width var(--transition-fast);
+}
+
+.nav-item:hover .nav-indicator {
+  width: 100%;
+}
+
+.visit-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color-eclipse);
+  color: var(--color-cream);
+  border: none;
+  border-radius: 99px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.visit-btn:hover {
+  background-color: var(--color-nebula);
+}
+
+/* Mobile Menu Hamburger */
+.mobile-menu-icon {
+  display: block;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-icon {
+    display: none;
+  }
+}
+
+.hamburger-line {
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-eclipse);
+  margin-bottom: 6px;
+}
+
+.hamburger-line.short {
+  width: 1.5rem;
+  margin-left: auto;
+}

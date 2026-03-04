@@ -1,0 +1,323 @@
+.app-container {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+  color: var(--color-eclipse);
+}
+
+/* Page Transitions */
+.view-section {
+  padding-top: 6rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+/* Quote Section on Home */
+.quote-section {
+  background-color: var(--color-eclipse);
+  padding: 5rem 0;
+  margin: 2.5rem 0;
+  overflow: hidden;
+  transform: rotate(-1deg) scale(1.05);
+  transform-origin: left;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-cream);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .quote-text { font-size: 2.5rem; }
+}
+
+/* Origin & Alchemy Section */
+.origin-section {
+  background-color: var(--color-eclipse);
+  color: var(--color-cream);
+  padding: 8rem 1.5rem;
+  margin-bottom: 6rem;
+}
+
+.origin-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-supertext {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-nebula);
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--color-cream);
+}
+
+@media (min-width: 768px) {
+  .section-heading { font-size: 4.5rem; }
+}
+
+.origin-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .origin-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+.origin-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.origin-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-10px);
+}
+
+.icon-box {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(255, 65, 3, 0.1);
+  color: var(--color-nebula);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.origin-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-cream);
+}
+
+.origin-card p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: rgba(245, 245, 220, 0.6);
+  line-height: 1.6;
+}
+
+/* Philosophy Teaser */
+.philosophy-teaser {
+  padding: 4rem 1.5rem 8rem;
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .philosophy-teaser { grid-template-columns: 1fr 1fr; gap: 6rem; }
+}
+
+.teaser-image-wrapper {
+  position: relative;
+}
+
+.teaser-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 2rem;
+  /* Removed grayscale to keep images warm */
+}
+
+.since-badge {
+  position: absolute;
+  bottom: -2.5rem;
+  right: -2rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--color-nebula);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-eclipse);
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+  .since-badge { width: 10rem; height: 10rem; font-size: 1.25rem; right: -2.5rem; }
+}
+
+.teaser-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-nebula);
+  margin-bottom: 1.5rem;
+}
+
+.teaser-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: var(--color-eclipse);
+}
+
+@media (min-width: 768px) {
+  .teaser-title { font-size: 4rem; }
+}
+
+.teaser-desc {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  color: rgba(0, 22, 33, 0.7);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--color-eclipse);
+  padding-bottom: 0.25rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--color-eclipse);
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.read-more-btn:hover {
+  color: var(--color-nebula);
+  border-color: var(--color-nebula);
+}
+
+/* Offerings Header (View Page) */
+.offerings-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.offerings-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: var(--color-eclipse);
+}
+
+@media (min-width: 768px) {
+  .offerings-title { font-size: 6rem; }
+}
+
+.offerings-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  color: rgba(0, 22, 33, 0.6);
+  margin-top: 1rem;
+}
+
+/* Philosophy View */
+.philosophy-view {
+  min-height: 100vh;
+  padding-top: 8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 8rem;
+}
+
+.philosophy-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 6rem;
+  background-color: var(--color-eclipse);
+  margin: 0 auto 3rem;
+  display: block;
+}
+
+.philosophy-heading {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-eclipse);
+}
+
+@media (min-width: 768px) {
+  .philosophy-heading { font-size: 6rem; }
+}
+
+.philosophy-statement {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+  color: var(--color-eclipse);
+}
+
+@media (min-width: 768px) {
+  .philosophy-statement { font-size: 2.25rem; }
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .philosophy-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+  }
+}
+
+.philo-img {
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.philo-img.offset {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .philo-img.offset { margin-top: 5rem; }
+}
