@@ -1,13 +1,13 @@
 export interface ChatMessage {
-  role: 'user' | 'model';
+  role: "user" | "model";
   text: string;
   isError?: boolean;
 }
 
 export enum ViewState {
-  HOME = 'HOME',
-  OFFERINGS = 'OFFERINGS',
-  PHILOSOPHY = 'PHILOSOPHY'
+  HOME = "HOME",
+  OFFERINGS = "OFFERINGS",
+  PHILOSOPHY = "PHILOSOPHY",
 }
 
 export interface OfferingCategory {

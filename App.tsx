@@ -21,13 +21,17 @@ const App: React.FC = () => {
             <Hero setView={setView} />
 
             {/* Quote Section */}
-            <div className="quote-section">
-              <div className="container">
-                <p className="quote-text">
-                  "We don't just brew coffee; we extract the{" "}
-                  <span className="text-nebula text-italic">soul</span> of the
-                  bean."
-                </p>
+            <div className="quote-section-wrapper">
+              <div className="quote-bg-gradient"></div>
+              <div className="quote-bg-circle"></div>
+              <div className="quote-section">
+                <div className="container">
+                  <p className="quote-text">
+                    "We don't just brew coffee; we extract the{" "}
+                    <span className="text-nebula text-italic">soul</span> of the
+                    bean."
+                  </p>
+                </div>
               </div>
             </div>
 
